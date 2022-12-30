@@ -1,5 +1,4 @@
 resource "aws_instance" "my_first_instance"{
-  count = 2
   ami                    = "ami-02045ebddb047018b"
   instance_type          = "t2.micro"
   key_name               = "singporekey"
