@@ -9,19 +9,19 @@ resource "aws_security_group" "aws_sg" {
     protocol         = "tcp"
     cidr_blocks      = [aws_vpc.aws_vpc.cidr_block]
   }
-  ingress {
-    description      = "port"
-    from_port        = 80
-     to_port         = 80
-    protocol         = "tcp"
-    cidr_blocks      = [aws_vpc.aws_vpc.cidr_block]
-  egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
-  }
-  }
+  # ingress {
+  #   description      = "port"
+  #   from_port        = 80
+  #    to_port         = 80
+  #   protocol         = "tcp"
+  #   cidr_blocks      = [aws_vpc.aws_vpc.cidr_block]
+  # egress {
+  #   from_port        = 0
+  #   to_port          = 0
+  #   protocol         = "-1"
+  #   cidr_blocks      = ["0.0.0.0/0"]
+  # }
+  #}
   tags = {
     Name = "sgroup"
   }

@@ -1,7 +1,3 @@
-variable "ec2_instance"{
-type = list(string)
-description = "this is ec2"
-}
 variable "aws_vpc" {
   type = string
   default = "192.168.0.0/16"
